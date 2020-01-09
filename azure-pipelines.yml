@@ -28,7 +28,7 @@ steps:
     msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    
+
 - task: VSTest@2
   inputs:
     testSelector: 'testAssemblies'
@@ -37,4 +37,5 @@ steps:
       !**\$(BuildConfiguration)\*test*.dll
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
+    testRunTitle: 'NopCommerce Test Plan'
 
