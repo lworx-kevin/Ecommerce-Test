@@ -36,6 +36,9 @@ steps:
       **\bin\$(BuildConfiguration)\**
       !**\$(BuildConfiguration)\*test*.dll
       !**\obj\**
+      **\*test*.dll
+      !**\*TestAdapter.dll
+      !**\obj\** 
     searchFolder: '$(System.DefaultWorkingDirectory)'
     testRunTitle: 'NopCommerce Test Plan'
 
