@@ -34,8 +34,4 @@ steps:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
       **\*test*.dll
-      !**\*TestAdapter.dll
-      !**\bin\Debug\netcoreapp2.2\Nop.Core.Tests.deps.json
-      !**\bin\Debug\netcoreapp2.2\Nop.Services.Tests.deps.json
-      !**\bin\Debug\netcoreapp2.2\Nop.Tests.deps.json
     searchFolder: '$(System.DefaultWorkingDirectory)'
