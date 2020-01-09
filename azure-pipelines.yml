@@ -38,3 +38,4 @@ steps:
     !**\nunit.runner.visualstudio.dotnetcore.testadapter.dll
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+    otherConsoleOptions: '/platform:x64 /Framework:.NETCoreApp,Version=v3.1 /logger:console;verbosity="normal" '
