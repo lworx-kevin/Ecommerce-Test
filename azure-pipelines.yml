@@ -31,8 +31,11 @@ steps:
 
 - task: VSTest@2
   inputs:    
-  testAssemblyVer2: |
-    **\bin\$(BuildConfiguration)\**\*tests*.dll
-  platform: '$(buildPlatform)'
-  configuration: '$(buildConfiguration)'
-  otherConsoleOptions: '/platform:x64 /Framework:.NETCoreApp,Version=v3.1 /logger:console;verbosity="normal" '
+      testAssemblyVer2: |
+        **\bin\$(BuildConfiguration)\**\*tests*.dll         
+        !**\obj\**
+        !**\xunit.runner.visualstudio.testadapter.dll
+        !**\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+      platform: '$(buildPlatform)'
+      configuration: '$(buildConfiguration)'
+      otherConsoleOptions: '/platform:x64 /Framework:.NETCoreApp,Version=v3.1 /logger:console;verbosity="normal" '
