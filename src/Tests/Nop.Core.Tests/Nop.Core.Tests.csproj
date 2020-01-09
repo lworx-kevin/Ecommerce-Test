@@ -14,26 +14,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="bin\Release\netcoreapp2.2\Nop.Core.Tests.deps.json" />
-    <Content Include="bin\Release\netcoreapp2.2\Nop.Core.Tests.runtimeconfig.dev.json" />
-    <Content Include="bin\Release\netcoreapp2.2\Nop.Core.Tests.runtimeconfig.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="bin\Release\netcoreapp2.2\Nop.Core.dll" />
-    <None Include="bin\Release\netcoreapp2.2\Nop.Core.pdb" />
-    <None Include="bin\Release\netcoreapp2.2\Nop.Core.Tests.dll" />
-    <None Include="bin\Release\netcoreapp2.2\Nop.Core.Tests.pdb" />
-    <None Include="bin\Release\netcoreapp2.2\Nop.Data.dll" />
-    <None Include="bin\Release\netcoreapp2.2\Nop.Data.pdb" />
-    <None Include="bin\Release\netcoreapp2.2\Nop.Services.dll" />
-    <None Include="bin\Release\netcoreapp2.2\Nop.Services.pdb" />
-    <None Include="bin\Release\netcoreapp2.2\Nop.Tests.dll" />
-    <None Include="bin\Release\netcoreapp2.2\Nop.Tests.pdb" />
-    <None Include="bin\Release\netcoreapp2.2\nunit.engine.api.dll" />
-    <None Include="bin\Release\netcoreapp2.2\nunit.engine.dll" />
-    <None Include="bin\Release\netcoreapp2.2\NUnit3.TestAdapter.dll" />
-    <None Include="bin\Release\netcoreapp2.2\NUnit3.TestAdapter.pdb" />
+    <Compile Remove="bin\Release\**" />
+    <EmbeddedResource Remove="bin\Release\**" />
+    <None Remove="bin\Release\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -44,6 +27,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Nop.Tests\Nop.Tests.csproj" /> 
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="bin\" />
   </ItemGroup>
 
 </Project>
