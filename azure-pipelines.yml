@@ -28,18 +28,14 @@ steps:
     msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
 - task: VSTest@2
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
       **\*test*.dll
       !**\*TestAdapter.dll
-      !**\bin\**
+      !**\bin\Debug\netcoreapp2.2\Nop.Core.Tests.deps.json
+      !**\bin\Debug\netcoreapp2.2\Nop.Services.Tests.deps.json
+      !**\bin\Debug\netcoreapp2.2\Nop.Tests.deps.json
     searchFolder: '$(System.DefaultWorkingDirectory)'
-
-
-- task: DotNetCoreCLI@2
-  displayName: 'dotnet test'
-  inputs:
-    command: test
-    projects: '**/*.Tests/*.csproj'
