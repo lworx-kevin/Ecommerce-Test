@@ -21,10 +21,7 @@ steps:
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
-- task: IISWebAppDeploymentOnMachineGroup@0
-  inputs:
-    WebSiteName: 'kchirayath-001-site1'
-    Package: '$(System.DefaultWorkingDirectory)\**\*.zip'
+
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
