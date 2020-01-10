@@ -1,0 +1,5 @@
+﻿{
+  "DataProvider": "sqlserver",
+  "DataConnectionString": "Data Source=SQL5050.site4now.net;Initial Catalog=DB_A53EDB_mcommerce;User Id=DB_A53EDB_mcommerce_admin;Password=monkeytrouble3#",
+  "RawDataSettings": {}
+}
