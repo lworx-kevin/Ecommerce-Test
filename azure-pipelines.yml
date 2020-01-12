@@ -32,7 +32,7 @@ steps:
   inputs:	
     targetFolder: '$(Build.ArtifactStagingDirectory)'    	
 - task: PublishBuildArtifacts@1	
-- task: VSTest@2	- task: VSTest@2
+- task: VSTest@2	
   inputs:	  inputs:
     testSelector: 'testAssemblies'	   
     searchFolder: '$(System.DefaultWorkingDirectory)'	   
